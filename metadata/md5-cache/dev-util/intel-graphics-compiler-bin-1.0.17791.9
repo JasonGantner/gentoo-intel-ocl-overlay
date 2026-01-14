@@ -1,0 +1,12 @@
+BDEPEND=app-arch/deb2targz app-alternatives/tar
+DEFINED_PHASES=install unpack
+DEPEND=dev-util/spirv-tools
+DESCRIPTION=LLVM-based OpenCL compiler for OpenCL targetting Intel Gen graphics hardware
+EAPI=8
+HOMEPAGE=https://github.com/intel/intel-graphics-compiler
+KEYWORDS=~amd64
+LICENSE=MIT
+RDEPEND=!dev-util/intel-graphics-compiler dev-util/spirv-tools
+SLOT=legacy/1.0.1
+SRC_URI=https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-core_1.0.17791.9_amd64.deb https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-media_1.0.17791.9_amd64.deb https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-opencl_1.0.17791.9_amd64.deb https://github.com/intel/intel-graphics-compiler/releases/download/igc-1.0.17791.9/intel-igc-opencl-devel_1.0.17791.9_amd64.deb
+_md5_=9b2869e67dfcf30f9c82ba36c67df6dd
