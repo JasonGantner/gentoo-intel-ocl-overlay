@@ -16,12 +16,11 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="MIT"
 SLOT="legacy/1.5.30872"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="+l0 +vaapi"
 
 RDEPEND="
 	!dev-libs/intel-compute-runtime:0
-	>=dev-util/intel-graphics-compiler-1.0.17791.18:legacy
 	!dev-util/intel-graphics-compiler:0
 	>=media-libs/gmmlib-22.5.2:=
 "
@@ -39,6 +38,10 @@ DEPEND="
 	vaapi? (
 		x11-libs/libdrm[video_cards_intel]
 		media-libs/libva
+	)
+	|| (
+		>=dev-util/intel-graphics-compiler-1.0.17791.18:legacy
+		dev-util/intel-graphics-compiler-bin:legacy
 	)
 "
 
